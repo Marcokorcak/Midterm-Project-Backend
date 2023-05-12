@@ -6,6 +6,8 @@ const { json } = require("express");
 const compression = require("compression");
 const bodyParser = require("body-parser");
 const db = require("./db");
+const PORT = process.env.PORT || 5432;
+
 
 app.listen(5000, () => {
   console.log("server from port 5432"); //server running on port 5000
