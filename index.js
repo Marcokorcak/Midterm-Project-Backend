@@ -13,12 +13,6 @@ app.listen(PORT, () => {
 });
 
 //middleware
-app.UseCors(x => x
-  .AllowAnyMethod()
-  .AllowAnyHeader()
-  .SetIsOriginAllowed(origin => true) // allow any origin
-  .AllowCredentials()); // allow credentials
-
 
 app.use(express.json()); //req.body
 app.use(compression());
