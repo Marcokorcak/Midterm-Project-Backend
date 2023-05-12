@@ -11,11 +11,6 @@ app.listen(5000, () => {
   console.log("server from port 5432"); //server running on port 5000
 });
 
-app.UseCors(x => x
-  .AllowAnyMethod()
-  .AllowAnyHeader()
-  .SetIsOriginAllowed(origin => true) // allow any origin
-  .AllowCredentials()); // allow credentials
 
 //middleware
 
