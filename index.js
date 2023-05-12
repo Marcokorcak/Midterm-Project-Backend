@@ -11,13 +11,13 @@ app.listen(5000, () => {
   console.log("server from port 5432"); //server running on port 5000
 });
 
-//middleware
+app.UseCors(x => x
+  .AllowAnyMethod()
+  .AllowAnyHeader()
+  .SetIsOriginAllowed(origin => true) // allow any origin
+  .AllowCredentials()); // allow credentials
 
-app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-})
+//middleware
 
 app.use(cors());
 app.use(express.json()); //req.body
